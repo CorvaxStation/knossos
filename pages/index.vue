@@ -3,7 +3,7 @@
     <div class="landing-hero">
       <ModrinthIcon />
       <h1 class="main-header">
-        The place for Minecraft
+        The place for Space Station 14
         <div class="animate-strong">
           <span>
             <strong
@@ -13,16 +13,16 @@
             >
               {{ projectType.display }}s <br />
             </strong>
-            <strong class="main-header-strong">mods</strong>
+            <strong class="main-header-strong">prototypes</strong>
           </span>
         </div>
       </h1>
       <h2>
-        Discover, play, and share Minecraft content through our open-source platform built for the
+        Discover, play, and share SS14 content through our open-source platform built for the
         community.
       </h2>
       <div class="button-group">
-        <nuxt-link to="/mods" class="iconified-button brand-button"> Discover mods </nuxt-link>
+        <nuxt-link to="/prototypes" class="iconified-button brand-button"> Discover content </nuxt-link>
         <a
           v-if="!$auth.user"
           :href="getAuthUrl()"

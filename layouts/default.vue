@@ -291,7 +291,7 @@
             >{{ config.public.hash.substring(0, 7) }}</a
           >
         </p>
-        <p>© Rinth, Inc.</p>
+        <p>© Corvax</p>
       </div>
       <div class="links links-1" role="region" aria-label="Legal">
         <h4 aria-hidden="true">Company</h4>
@@ -334,7 +334,7 @@
         </nuxt-link>
       </div>
       <div class="not-affiliated-notice">
-        NOT AN OFFICIAL MINECRAFT PRODUCT. NOT APPROVED BY OR ASSOCIATED WITH MOJANG.
+        NOT AN OFFICIAL SPACE STATION 14 PRODUCT. NOT APPROVED BY OR ASSOCIATED WITH SPACE WIZARDS FEDERATION.
       </div>
     </footer>
   </div>
@@ -390,28 +390,16 @@ export default defineNuxtComponent({
       hideDropdown: false,
       navRoutes: [
         {
-          label: 'Mods',
-          href: '/mods',
+          label: 'Prototypes',
+          href: '/prototypes',
         },
         {
-          label: 'Plugins',
-          href: '/plugins',
+          label: 'Maps',
+          href: '/maps',
         },
         {
-          label: 'Data Packs',
-          href: '/datapacks',
-        },
-        {
-          label: 'Shaders',
-          href: '/shaders',
-        },
-        {
-          label: 'Resource Packs',
-          href: '/resourcepacks',
-        },
-        {
-          label: 'Modpacks',
-          href: '/modpacks',
+          label: 'Bundles',
+          href: '/bundles',
         },
       ],
     }
