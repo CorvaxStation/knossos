@@ -15,11 +15,11 @@ export const fileIsValid = (file, validationOptions) => {
 export const acceptFileFromProjectType = (projectType) => {
   switch (projectType) {
     case 'prototype':
-      return '.yml,.yaml,.zip,application/zip'
+      return '.zip,application/zip'
     case 'map':
-      return '.yml,.yaml,.zip,application/zip'
+      return '.zip,application/zip'
     case 'bundle':
-      return '.yml,.yaml,.zip,application/zip'
+      return '.zip,application/zip'
     default:
       return '*'
   }
