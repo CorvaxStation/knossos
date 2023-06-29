@@ -9,34 +9,19 @@ export const useTags = () =>
     reportTypes: tags.reportTypes,
     projectTypes: [
       {
-        actual: 'mod',
-        id: 'mod',
-        display: 'mod',
+        actual: 'prototype',
+        id: 'prototype',
+        display: 'prototype',
       },
       {
-        actual: 'mod',
-        id: 'plugin',
-        display: 'plugin',
+        actual: 'map',
+        id: 'map',
+        display: 'map',
       },
       {
-        actual: 'mod',
-        id: 'datapack',
-        display: 'data pack',
-      },
-      {
-        actual: 'shader',
-        id: 'shader',
-        display: 'shader',
-      },
-      {
-        actual: 'resourcepack',
-        id: 'resourcepack',
-        display: 'resource pack',
-      },
-      {
-        actual: 'modpack',
-        id: 'modpack',
-        display: 'modpack',
+        actual: 'bundle',
+        id: 'bundle',
+        display: 'bundle',
       },
     ],
     loaderData: {

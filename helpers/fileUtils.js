@@ -14,18 +14,12 @@ export const fileIsValid = (file, validationOptions) => {
 
 export const acceptFileFromProjectType = (projectType) => {
   switch (projectType) {
-    case 'mod':
-      return '.jar,.zip,.litemod,application/java-archive,application/x-java-archive,application/zip'
-    case 'plugin':
-      return '.jar,.zip,application/java-archive,application/x-java-archive,application/zip'
-    case 'resourcepack':
-      return '.zip,application/zip'
-    case 'shader':
-      return '.zip,application/zip'
-    case 'datapack':
-      return '.zip,application/zip'
-    case 'modpack':
-      return '.mrpack,application/x-modrinth-modpack+zip,application/zip'
+    case 'prototype':
+      return '.yml,.yaml,.zip,application/zip'
+    case 'map':
+      return '.yml,.yaml,.zip,application/zip'
+    case 'bundle':
+      return '.yml,.yaml,.zip,application/zip'
     default:
       return '*'
   }

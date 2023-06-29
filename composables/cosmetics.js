@@ -17,12 +17,9 @@ export const useCosmetics = () =>
         externalLinksNewTab: true,
         notUsingBlockers: false,
         searchDisplayMode: {
-          mod: 'list',
-          plugin: 'list',
-          resourcepack: 'gallery',
-          modpack: 'list',
-          shader: 'gallery',
-          datapack: 'list',
+          prototype: 'list',
+          map: 'gallery',
+          bundle: 'list',
           user: 'list',
         },
       }

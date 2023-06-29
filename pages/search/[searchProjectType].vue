@@ -60,7 +60,7 @@
             </div>
           </section>
           <section
-            v-if="projectType.id !== 'resourcepack' && projectType.id !== 'datapack'"
+            v-if="false"
             aria-label="Loader filters"
           >
             <h3
@@ -134,7 +134,7 @@
             />
           </section>
           <section
-            v-if="!['resourcepack', 'plugin', 'shader', 'datapack'].includes(projectType.id)"
+            v-if="false"
             aria-label="Environment filters"
           >
             <h3 class="sidebar-menu-heading">Environments</h3>
@@ -155,14 +155,14 @@
               <ServerIcon aria-hidden="true" />
             </SearchFilter>
           </section>
-          <h3 class="sidebar-menu-heading">Minecraft versions</h3>
-          <Checkbox
-            v-model="showSnapshots"
-            label="Show all versions"
-            description="Show all versions"
-            style="margin-bottom: 0.5rem"
-            :border="false"
-          />
+          <h3 class="sidebar-menu-heading">Versions</h3>
+<!--          <Checkbox-->
+<!--            v-model="showSnapshots"-->
+<!--            label="Show all versions"-->
+<!--            description="Show all versions"-->
+<!--            style="margin-bottom: 0.5rem"-->
+<!--            :border="false"-->
+<!--          />-->
           <multiselect
             v-model="selectedVersions"
             :options="
@@ -182,6 +182,7 @@
             placeholder="Choose versions..."
             @update:model-value="onSearchChange(1)"
           />
+          <section v-if="false">
           <h3 class="sidebar-menu-heading">Open source</h3>
           <Checkbox
             v-model="onlyOpenSource"
@@ -190,6 +191,7 @@
             :border="false"
             @update:model-value="onSearchChange(1)"
           />
+          </section>
         </div>
       </section>
     </aside>
@@ -414,7 +416,7 @@ export default defineNuxtComponent({
     const sortType = ref({ display: 'Relevance', name: 'relevance' })
     const maxResults = ref(20)
     const currentPage = ref(1)
-    const projectType = ref({ id: 'mod', display: 'mod', actual: 'mod' })
+    const projectType = ref({ id: 'prototype', display: 'prototype', actual: 'prototype' })
 
     const metaDescription = computed(
       () =>
