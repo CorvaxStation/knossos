@@ -217,7 +217,7 @@
         <a rel="noopener" href="https://discord.gg/EUHuJHt" :target="$external()">Discord</a>
         for support.
       </div>
-      <Promotion />
+<!--      <Promotion />-->
       <div class="card search-controls">
         <div class="search-filter-container">
           <button

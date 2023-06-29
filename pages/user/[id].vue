@@ -143,7 +143,7 @@
         </div>
       </div>
       <div class="normal-page__content">
-        <Promotion />
+<!--        <Promotion />-->
         <nav class="navigation-card">
           <NavRow
             :links="[

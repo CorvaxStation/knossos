@@ -426,7 +426,7 @@
             Prism Launcher</a
           >.
         </div>
-        <Promotion v-if="$tag.approvedStatuses.includes(project.status)" />
+<!--        <Promotion v-if="$tag.approvedStatuses.includes(project.status)" />-->
         <div class="navigation-card">
           <NavRow
             :links="[
