@@ -89,61 +89,6 @@
           :disabled="!hasPermission"
         />
       </div>
-      <template
-        v-if="
-          project.project_type !== 'resourcepack' &&
-          project.project_type !== 'plugin' &&
-          project.project_type !== 'shader' &&
-          project.project_type !== 'datapack'
-        "
-      >
-        <div class="adjacent-input">
-          <label for="project-env-client">
-            <span class="label__title">Client-side</span>
-            <span class="label__description">
-              Select based on if the
-              {{ $formatProjectType(project.project_type).toLowerCase() }} has functionality on the
-              client side. Just because a mod works in Singleplayer doesn't mean it has actual
-              client-side functionality.
-            </span>
-          </label>
-          <Multiselect
-            id="project-env-client"
-            v-model="clientSide"
-            placeholder="Select one"
-            :options="sideTypes"
-            :custom-label="(value) => value.charAt(0).toUpperCase() + value.slice(1)"
-            :searchable="false"
-            :close-on-select="true"
-            :show-labels="false"
-            :allow-empty="false"
-            :disabled="!hasPermission"
-          />
-        </div>
-        <div class="adjacent-input">
-          <label for="project-env-server">
-            <span class="label__title">Server-side</span>
-            <span class="label__description">
-              Select based on if the
-              {{ $formatProjectType(project.project_type).toLowerCase() }} has functionality on the
-              <strong>logical</strong> server. Remember that Singleplayer contains an integrated
-              server.
-            </span>
-          </label>
-          <Multiselect
-            id="project-env-server"
-            v-model="serverSide"
-            placeholder="Select one"
-            :options="sideTypes"
-            :custom-label="(value) => value.charAt(0).toUpperCase() + value.slice(1)"
-            :searchable="false"
-            :close-on-select="true"
-            :show-labels="false"
-            :allow-empty="false"
-            :disabled="!hasPermission"
-          />
-        </div>
-      </template>
       <div class="adjacent-input">
         <label for="project-visibility">
           <span class="label__title">Visibility</span>

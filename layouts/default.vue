@@ -265,7 +265,7 @@
       <div class="logo-info" role="region" aria-label="Modrinth information">
         <BrandTextLogo aria-hidden="true" class="text-logo" />
         <p>
-          Modrinth is
+          Project is
           <a
             :target="$external()"
             href="https://github.com/modrinth"
@@ -291,32 +291,21 @@
             >{{ config.public.hash.substring(0, 7) }}</a
           >
         </p>
-        <p>© Corvax</p>
+        <p>Hosted by Corvax wtih ❤️</p>
       </div>
       <div class="links links-1" role="region" aria-label="Legal">
         <h4 aria-hidden="true">Company</h4>
         <nuxt-link to="/legal/terms"> Terms</nuxt-link>
         <nuxt-link to="/legal/privacy"> Privacy</nuxt-link>
         <nuxt-link to="/legal/rules"> Rules</nuxt-link>
-        <a :target="$external()" href="https://careers.modrinth.com"
-          >Careers <span class="count-bubble">1</span></a
-        >
       </div>
       <div class="links links-2" role="region" aria-label="Resources">
         <h4 aria-hidden="true">Resources</h4>
-        <a :target="$external()" href="https://blog.modrinth.com">Blog</a>
-        <a :target="$external()" href="https://docs.modrinth.com">Docs</a>
-        <a :target="$external()" href="https://status.modrinth.com">Status</a>
         <a rel="noopener" :target="$external()" href="https://github.com/modrinth">GitHub</a>
       </div>
       <div class="links links-3" role="region" aria-label="Interact">
         <h4 aria-hidden="true">Interact</h4>
-        <a rel="noopener" :target="$external()" href="https://discord.gg/EUHuJHt"> Discord </a>
-        <a rel="noopener" :target="$external()" href="https://twitter.com/modrinth"> Twitter </a>
-        <a rel="noopener" :target="$external()" href="https://floss.social/@modrinth"> Mastodon </a>
-        <a rel="noopener" :target="$external()" href="https://crowdin.com/project/modrinth">
-          Crowdin
-        </a>
+        <a rel="noopener" :target="$external()" href="https://discord.gg/Dacdqg6NaZ"> Discord </a>
       </div>
       <div class="buttons">
         <button

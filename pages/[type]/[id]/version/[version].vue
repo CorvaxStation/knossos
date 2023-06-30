@@ -101,9 +101,6 @@
           <li v-if="newFiles.length === 0 && version.files.length === 0 && !replaceFile">
             Your version must have a file uploaded.
           </li>
-          <li v-if="version.loaders.length === 0 && project.project_type !== 'resourcepack'">
-            Your version must have the supported mod loaders selected.
-          </li>
         </ul>
       </div>
       <div v-if="isCreating" class="input-group">
@@ -564,32 +561,6 @@
           </div>
           <span v-else>{{ version.version_number }}</span>
         </div>
-        <div v-if="project.project_type !== 'resourcepack'">
-          <h4>Loaders</h4>
-          <Multiselect
-            v-if="isEditing"
-            v-model="version.loaders"
-            :options="
-              $tag.loaders
-                .filter((x) =>
-                  x.supported_project_types.includes(project.actualProjectType.toLowerCase())
-                )
-                .map((it) => it.name)
-            "
-            :custom-label="(value) => $formatCategory(value)"
-            :loading="$tag.loaders.length === 0"
-            :multiple="true"
-            :searchable="false"
-            :show-no-results="false"
-            :close-on-select="false"
-            :clear-on-select="false"
-            :show-labels="false"
-            :limit="6"
-            :hide-selected="true"
-            placeholder="Choose loaders..."
-          />
-          <Categories v-else :categories="version.loaders" :type="project.actualProjectType" />
-        </div>
         <div>
           <h4>Game versions</h4>
           <template v-if="isEditing">
@@ -612,13 +583,6 @@
               :limit="6"
               :hide-selected="true"
               placeholder="Choose versions..."
-            />
-            <Checkbox
-              v-model="showSnapshots"
-              label="Show all versions"
-              description="Show all versions"
-              style="margin-top: 0.5rem"
-              :border="false"
             />
           </template>
           <span v-else>{{ $formatVersion(version.game_versions) }}</span>
@@ -947,7 +911,6 @@ export default defineNuxtComponent({
       return (
         this.version.version_number === '' ||
         this.version.game_versions.length === 0 ||
-        (this.version.loaders.length === 0 && this.project.project_type !== 'resourcepack') ||
         (this.newFiles.length === 0 && this.version.files.length === 0 && !this.replaceFile)
       )
     },
@@ -1196,9 +1159,7 @@ export default defineNuxtComponent({
         fileParts.unshift(this.replaceFile.name.concat('-primary'))
       }
 
-      if (this.project.project_type === 'resourcepack') {
-        version.loaders = ['minecraft']
-      }
+      version.loaders = ['launcher']
 
       const newVersion = {
         project_id: version.project_id,

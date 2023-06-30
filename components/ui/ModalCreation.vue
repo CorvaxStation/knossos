@@ -104,28 +104,14 @@ export default {
     },
     getClientSide() {
       switch (this.getProjectType().id) {
-        case 'plugin':
-          return 'unsupported'
-        case 'resourcepack':
-          return 'required'
-        case 'shader':
-          return 'required'
-        case 'datapack':
-          return 'optional'
+        // Here was project_type's with sideTypes
         default:
-          return 'unknown'
+          return 'unsupported'
       }
     },
     getServerSide() {
       switch (this.getProjectType().id) {
-        case 'plugin':
-          return 'required'
-        case 'resourcepack':
-          return 'unsupported'
-        case 'shader':
-          return 'unsupported'
-        case 'datapack':
-          return 'required'
+        // Here was project_type's with sideTypes
         default:
           return 'unknown'
       }

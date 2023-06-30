@@ -214,7 +214,7 @@
         <a href="https://docs.modrinth.com/docs/modpacks/creating_modpacks/" :target="$external()"
           >creating modpacks</a
         >. Join us on
-        <a rel="noopener" href="https://discord.gg/EUHuJHt" :target="$external()">Discord</a>
+        <a rel="noopener" href="https://discord.gg/Dacdqg6NaZ" :target="$external()">Discord</a>
         for support.
       </div>
 <!--      <Promotion />-->
