@@ -268,26 +268,6 @@ export default {
           },
         },
         {
-          hide:
-            this.project.project_type === 'resourcepack' ||
-            this.project.project_type === 'plugin' ||
-            this.project.project_type === 'shader' ||
-            this.project.project_type === 'datapack',
-          condition:
-            this.project.client_side === 'unknown' || this.project.server_side === 'unknown',
-          title: 'Select supported environments',
-          id: 'select-environments',
-          description: `Select if the ${this.$formatProjectType(
-            this.project.project_type
-          ).toLowerCase()} functions on the client-side and/or server-side.`,
-          status: 'required',
-          link: {
-            path: 'settings',
-            title: 'Visit general settings',
-            hide: this.routeName === 'type-id-settings',
-          },
-        },
-        {
           condition: this.project.license.id === 'LicenseRef-Unknown',
           title: 'Select license',
           id: 'select-license',
