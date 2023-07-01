@@ -291,7 +291,7 @@
             >{{ config.public.hash.substring(0, 7) }}</a
           >
         </p>
-        <p>Hosted by Corvax wtih ❤️</p>
+        <p>Hosted by Corvax with ❤️</p>
       </div>
       <div class="links links-1" role="region" aria-label="Legal">
         <h4 aria-hidden="true">Company</h4>
