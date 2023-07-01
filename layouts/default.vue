@@ -422,6 +422,7 @@ export default defineNuxtComponent({
   },
   methods: {
     runAnalytics() {
+      return; // NOTE: Disabled
       const config = useRuntimeConfig()
 
       setTimeout(() => {
