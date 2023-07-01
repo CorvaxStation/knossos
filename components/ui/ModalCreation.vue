@@ -29,7 +29,7 @@
       </label>
       <div class="text-input-wrapper">
         <div class="text-input-wrapper__before">
-          https://modrinth.com/{{ getProjectType() ? getProjectType().id : '???' }}/
+          https://workshop.ss14.ru/{{ getProjectType() ? getProjectType().id : '???' }}/
         </div>
         <input
           id="slug"
